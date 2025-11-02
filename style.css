@@ -117,7 +117,7 @@ html, body {
 
 .block_2 p {
     position: absolute; /* 設定為絕對定位 */
-    top: 80%;           /* 垂直從頂部下移 80% */
+    top: 65%;           /* 垂直從頂部下移 80% */
     left: 30%;          /* 水平從左側右移 30% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
     color: #FFFFFF; 
@@ -143,10 +143,10 @@ html, body {
 
 .block_3 p {
     position: absolute; /* 設定為絕對定位 */
-    top: 50%;           /* 垂直從頂部下移 50% */
+    top: 45%;           /* 垂直從頂部下移 50% */
     left: 50%;          /* 水平從左側右移 50% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
-    color: #FFFFFF;
+    color: #E60000;
     font-size: 36px;
     font-weight: bold;
     text-align: center;
