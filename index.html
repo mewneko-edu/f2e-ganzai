@@ -28,28 +28,29 @@
     <main class="main">
         <div class="container">
             <section class="banner">
-                <img src="../img/hero.svg" alt="banner_img"><!--橫幅圖片:柑仔影院-->
+                <img src="img/hero.svg" alt="banner_img"><!--橫幅圖片:柑仔影院-->
             </section>
             <section class="content">
-                <div class="block_1"><!--第一塊-->
+                <div class="block_1"><!--第一塊圖+文-->
                     <p>玻璃罐裡裝著時間，<br>糖果的甜在空氣裡化開。</p>
                     <img src="img/main_1.svg" alt="candy_img">
                 </div>
-                <div class="block_2"><!--第二塊-->
+                <div class="block_2"><!--第二塊圖-->
                     <img src="img/main_2.svg" alt="movie1_img">
                     <p>二樓的電影散發著柔光，照亮一段舊日子。</p>
                 </div>
-                <div class="block_3"><!--第三塊-->
-                    <img src="img//main_3.svg" alt="movie2_img">
+                <div class="block_3"><!--三塊文+圖-->
+                    <img src="img/main_3.svg" alt="movie2_img">
                     <p>柑仔店，永遠開在那個午後。</p>
                 </div>
             </section>
             <section class="aboutus"><!--關於我們文＋圖-->
                 <img src="img/main_4.png" alt="aboutus_img">
                 <div class="aboutus_text">
-                    <p>我們相信，時間不會帶走一切，有些記憶會留在某些地方。<br>
+                    <p>我們相信，時間不會帶走一切，<br>
+                        有些記憶會留在某些地方。<br>
                         柑仔店對我們來說不只是零食的地方，<br>
-                        而是一段可以「被重訪的時間」。<br>
+                        是一段可以「被重訪的時間」。<br>
                         在這裡，我們把童年的味道、<br>
                         老電影的光影以及那份單純的快樂重新拼起來，<br>
                         讓柑仔影院成為一個能讓大家「重訪過去」的地方。
@@ -58,6 +59,40 @@
             </section>
         </div>
     </main>
+
+    <!--回到頂部的按鈕-->
+    <button id="backToTopBtn" class="back-to-top-btn" title="回到頂部">
+        ↑
+    </button>
+
+    <script>
+        // 取得按鈕元素
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        // 設定按鈕顯示的滾動距離 (例如：滾動超過 300px 時顯示)
+        const scrollThreshold = 300; 
+        // 函式：偵測滾動，決定按鈕是否顯示
+        function toggleBackToTopButton() {
+            if (window.scrollY > scrollThreshold) {
+                // 滾動超過門檻，顯示按鈕
+                backToTopBtn.classList.add('show');
+            } else {
+                // 否則隱藏按鈕
+                backToTopBtn.classList.remove('show');
+            }
+        }
+        // 函式：點擊按鈕後平滑滾動到頂部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // 使用平滑滾動效果
+            });
+        }
+        // 綁定事件監聽器
+        // 1. 頁面滾動時執行偵測函式
+        window.addEventListener('scroll', toggleBackToTopButton);
+        // 2. 按鈕被點擊時執行回頂函式
+        backToTopBtn.addEventListener('click', scrollToTop);
+    </script>
 
     <footer class="footer"><!--footer目錄-->
         <div class="footer_left">
