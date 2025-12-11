@@ -4,6 +4,7 @@
 <head>
     <title>柑仔影院</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS & favicon-->
     <link rel="stylesheet" href="CSS/all_style.css">
     <link rel="stylesheet" href="CSS/index.css">
@@ -24,22 +25,32 @@
             <li class="header-nav-list-item"><a href="./movie.html" class="header-nav-list-link">影院資訊</a></li>
             <li class="header-nav-list-item"><a href="./order.html" class="header-nav-list-link">電影訂票</a></li>
         </ul>
+        <img class="header_burgur" src="img/test.svg" alt="test_img">
     </header>
 
     <!--main主要內容-->
     <main class="main">
         <div class="container">
             <section class="banner">
-                <img src="./img/hero.svg" alt="banner_img"><!--橫幅圖片:柑仔影院-->
+                <picture>
+                    <source srcset="./img/hero_m.svg" media="(max-width: 765px)">
+                    <img src="./img/hero.svg" alt="banner_img">
+                </picture>
             </section>
             <section class="content">
                 <div class="block_1"><!--第一塊圖+文-->
                     <p>玻璃罐裡裝著時間，<br>糖果的甜在空氣裡化開。</p>
-                    <img src="./img/main_1.svg" alt="candy_img">
+                    <picture>
+                        <source srcset="./img/main_1_m.svg" media="(max-width: 765px)">
+                        <img src="./img/main_1.svg" alt="candy_img">
+                    </picture>
                 </div>
                 <div class="block_2"><!--第二塊圖-->
-                    <img src="./img/main_2.svg" alt="movie1_img">
-                    <p>二樓的電影散發著柔光，照亮一段舊日子。</p>
+                    <picture>
+                        <source srcset="./img/main_2_m.svg" media="(max-width: 765px)">
+                        <img src="./img/main_2.svg" alt="movie1_img">
+                    </picture>
+                    <p>二樓的電影散發著柔光，<br>照亮一段舊日子。</p>
                 </div>
                 <div class="block_3"><!--三塊文+圖-->
                     <img src="./img/main_3.svg" alt="movie2_img">
@@ -56,7 +67,8 @@
                         <br>
                         在這裡，<br>
                         我們把那份單純的快樂重新拼起來，<br>
-                        讓柑仔影院成為一個能讓大家「重訪過去」的地方。</p>
+                        讓柑仔影院成為一個能讓大家「重訪過去」的地方。
+                    </p>
                 </div>
             </section>
         </div>
@@ -69,7 +81,7 @@
 
     <script src="./js/button.js"></script>
     <script src="./js/fadein.js"></script>
- 
+
     <footer class="footer"><!--footer目錄-->
         <div class="footer_left">
             <a class="footer_logo" href="./index.html"><img src="./img/logo.svg" alt="logo_img"></a>
