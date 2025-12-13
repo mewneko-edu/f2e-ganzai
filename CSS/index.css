@@ -35,7 +35,7 @@
 
 .loading-content p::after {
   content: "";
-  animation: dots 2.5s infinite;
+  animation: dots 2s infinite;
 }
 
 @keyframes dots {
@@ -46,7 +46,7 @@
 }
 
 #loading {
-  transition: opacity 0.9s ease;
+  transition: opacity 0.5s ease;
 }
 
 .banner{
