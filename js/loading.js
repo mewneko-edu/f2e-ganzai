@@ -8,5 +8,5 @@ window.addEventListener("load", () => {
         setTimeout(() => {
             loading.style.display = "none";
         }, 500);
-    }, 1500); // 顯示 1.5 秒
+    }, 2000); // 顯示 2 秒
 });
