@@ -2,10 +2,9 @@
 /* 此檔案為desktop & tablet的全站RWD設定 */
 
 :root {
-    --s_width: 600px;
-    --m_width: 768px;
-    --l_width: 992px;
-    --xl_width: 1200px;
+    --s_width: 480px;   /* 手機裝置 max-width */
+    --m_width: 768px;   /* 平板裝置 min-width */
+    --l_width: 1200px;   /* 電腦裝置 min-width */
     /* 使用方法：一般狀況使用中間三種就好，字的大小則可分五種 */
     /* 超小型裝置 max-width: var(--s_width); */
     /* 小型裝置 min-width: var(--s_width); */

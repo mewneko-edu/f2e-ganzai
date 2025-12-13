@@ -1,3 +1,42 @@
+/* Loading 背景 */
+#loading {
+  position: fixed;
+  inset: 0;
+  background-color: #f8f1dc; /* 復古淡黃 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* 內容 */
+.loading-content {
+  text-align: center;
+  color: #E60000;
+  font-family: "Chiron GoRound TC";
+  font-size: 36px;
+}
+
+/* 糖果動畫 */
+.loading-content img {
+  width: 120px;
+  animation: spin 1.2s infinite linear;
+}
+
+/* 轉轉動畫 */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#loading {
+  transition: opacity 0.5s ease;
+}
+
 .banner{
     width: 100%;
 }
@@ -21,25 +60,35 @@
 
 }
 
+/* 手機 */
 .block_1 p {
     position: absolute; /* 設定為絕對定位 */
-    top: 30%;           /* 垂直從頂部下移 30% */
+    top: 47%;           /* 垂直從頂部下移 47% */
     left: 50%;          /* 水平從左側右移 50% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
-    color: #E60000; 
-    font-size: 36px; 
+    color: #E60000;
+    font-size: 23px;
     font-weight: bold;
     text-align: right;
     z-index: 10; /* 確保文字層級高於圖片 */
     width: 80%; /* 讓文字不會貼到邊緣 */
-    line-height: 2;
+    line-height: 1.5;
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (min-width: 768px) { /* 平板 */
   .block_1 p {
-    font-size: 26px;
-    top: 50%;
+    font-size: 30px;
+    top: 40%;
     left: 55%;
+  }
+}
+
+@media screen and (min-width: 1200px) { /* 電腦 */
+  .block_1 p {
+    font-size: 36px;
+    top: 30%;
+    left: 50%;
+    line-height: 2;
   }
 }
 
@@ -53,28 +102,37 @@
     display: block; /* 移除圖片底部可能的多餘空間 */
     width: 100%;
     height: 100%;
-
 }
 
+/* 手機 */
 .block_2 p {
     position: absolute; /* 設定為絕對定位 */
-    top: 60%;           /* 垂直從頂部下移 60% */
-    left: 45%;          /* 水平從左側右移 30% */
+    top: 50%;           /* 垂直從頂部下移 50% */
+    left: 45%;          /* 水平從左側右移 45% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
     color: #FFFFFF; 
-    font-size: 36px;
+    font-size: 23px;
     font-weight: bold;
     text-align: left;
     z-index: 10; /* 確保文字層級高於圖片 */
     width: 80%; /* 讓文字不會貼到邊緣 */
-    line-height: 2;
+    line-height: 1.5;
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (min-width: 768px) {
   .block_2 p {
-    font-size: 26px;
-    top: 47%;
-    left: 45%;
+    font-size: 30px;
+    top: 52%;
+    left: 48%;
+  }
+}
+
+@media screen and (min-width: 1200px) { /* 電腦 */
+  .block_2 p {
+    font-size: 36px;
+    top: 55%;
+    left: 50%;
+    line-height: 2;
   }
 }
 
@@ -91,21 +149,43 @@
 
 }
 
+/* 手機 */
 .block_3 p {
     position: absolute; /* 設定為絕對定位 */
-    top: 45%;           /* 垂直從頂部下移 45% */
+    top: 54%;           /* 垂直從頂部下移 54% */
     left: 50%;          /* 水平從左側右移 50% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
     color: #E60000;
-    font-size: 40px;
+    font-size: 25px;
     font-weight: bold;
     text-align: center; /*設定文字在自身區塊內的置中對齊。*/
     z-index: 10; /* 確保文字層級高於圖片 */
-    width: 55%; /* 讓文字不會貼到邊緣 */
+    width: 60%; /* 讓文字不會貼到邊緣 */
     background-color: rgba(255, 250, 225, 0.7);
-    padding: 50px 0px;
+    padding: 40px 0px;
     border-radius: 30px;
     line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) { /* 平板 */
+  .block_3 p {
+    font-size: 35px;
+    top: 50%;
+    left: 50%;
+    width: 58%; /* 讓文字不會貼到邊緣 */
+    padding: 40px 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) { /* 電腦 */
+  .block_3 p {
+    font-size: 40px;
+    top: 45%;
+    left: 50%;
+    line-height: 1.5;
+    width: 40%; /* 讓文字不會貼到邊緣 */
+    padding: 50px 0px;
+  }
 }
 
 .aboutus{
@@ -122,16 +202,64 @@
 
 .aboutus_text {
     position: absolute; /* 設定為絕對定位 */
-    top: 50%;           /* 垂直從頂部下移 50% */
-    left: 57%;          /* 水平從左側右移 57% */
+
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
     color: #FFFFFF;
-    font-size: 36px;
+    font-size: 20px;
     font-weight: 600;
     text-align: right;
-    line-height: 2;
+    line-height: 1.5;
     z-index: 10; /* 確保文字層級高於圖片 */
     width: 80%; /* 讓文字不會貼到邊緣 */
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.aboutus_p {
+  display: none;
+}
+
+/* 手機 */
+@media (max-width: 767px) {
+  .aboutus_text {
+    top: 26%;
+    left: 50%;
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: right;
+  }
+
+  .aboutus_p.mobile {
+    display: block;
+  }
+}
+
+/* 平板 */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .aboutus_text {
+    top: 49%;
+    left: 57%;
+    font-size: 24px;
+    line-height: 2;
+  }
+
+  .aboutus_p.tablet {
+    display: block;
+  }
+}
+
+/* 電腦 */
+@media (min-width: 1200px) {
+  .aboutus_text {
+    top: 50%;
+    left: 57%;
+    font-size: 34px;
+    line-height: 2;
+  }
+
+  .aboutus_p.desktop {
+    display: block;
+  }
 }
 
 .aboutus_text {

@@ -4,11 +4,13 @@
 <head>
     <title>柑仔影院</title>
     <meta charset="UTF-8">
+    <!--RWD-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS & favicon-->
     <link rel="stylesheet" href="CSS/all_style.css">
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="icon" href="img/favicon.ico">
+    <script src="./js/loading.js"></script>
     <!--google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,89 +18,166 @@
 </head>
 
 <body>
-    <!--header目錄-->
-    <header class="header">
-        <a class="header_logo" href="index.html"><img src="./img/logo.svg" alt="logo_img"></a>
-        <ul class="header-nav-list">
-            <li class="header-nav-list-item"><a href="./index.html" class="header-nav-list-link">關於我們</a></li>
-            <li class="header-nav-list-item"><a href="./product.html" class="header-nav-list-link">販售商品</a></li>
-            <li class="header-nav-list-item"><a href="./movie.html" class="header-nav-list-link">影院資訊</a></li>
-            <li class="header-nav-list-item"><a href="./order.html" class="header-nav-list-link">電影訂票</a></li>
-        </ul>
-        <img class="header_burgur" src="img/test.svg" alt="test_img">
-    </header>
-
-    <!--main主要內容-->
-    <main class="main">
-        <div class="container">
-            <section class="banner">
-                <picture>
-                    <source srcset="./img/hero_m.svg" media="(max-width: 765px)">
-                    <img src="./img/hero.svg" alt="banner_img">
-                </picture>
-            </section>
-            <section class="content">
-                <div class="block_1"><!--第一塊圖+文-->
-                    <p>玻璃罐裡裝著時間，<br>糖果的甜在空氣裡化開。</p>
-                    <picture>
-                        <source srcset="./img/main_1_m.svg" media="(max-width: 765px)">
-                        <img src="./img/main_1.svg" alt="candy_img">
-                    </picture>
-                </div>
-                <div class="block_2"><!--第二塊圖-->
-                    <picture>
-                        <source srcset="./img/main_2_m.svg" media="(max-width: 765px)">
-                        <img src="./img/main_2.svg" alt="movie1_img">
-                    </picture>
-                    <p>二樓的電影散發著柔光，<br>照亮一段舊日子。</p>
-                </div>
-                <div class="block_3"><!--三塊文+圖-->
-                    <img src="./img/main_3.svg" alt="movie2_img">
-                    <p>柑仔店，<br>永遠開在那個午後。</p>
-                </div>
-            </section>
-            <section class="aboutus"><!--關於我們文＋圖-->
-                <img src="./img/main_4.svg" alt="aboutus_img">
-                <div class="aboutus_text">
-                    <p>我們相信，時間不會帶走一切，<br>
-                        有些記憶會留在某些地方。<br>
-                        柑仔店對我們來說不只是零食的地方，<br>
-                        是一段可以「被重訪的時間」。<br>
-                        <br>
-                        在這裡，<br>
-                        我們把那份單純的快樂重新拼起來，<br>
-                        讓柑仔影院成為一個能讓大家「重訪過去」的地方。
-                    </p>
-                </div>
-            </section>
+    <!-- Loading 畫面 -->
+    <div id="loading">
+        <div class="loading-content">
+            <img src="./img/candy_1.svg" alt="candy">
+            <p>loading...</p>
         </div>
-    </main>
+    </div>
 
-    <!--回到頂部的按鈕-->
-    <button id="backToTopBtn" class="back-to-top-btn" title="回到頂部">
-        ↑
-    </button>
-
-    <script src="./js/button.js"></script>
-    <script src="./js/fadein.js"></script>
-
-    <footer class="footer"><!--footer目錄-->
-        <div class="footer_left">
-            <a class="footer_logo" href="./index.html"><img src="./img/logo.svg" alt="logo_img"></a>
-            <div class="footer_info">
-                <p>地址：臺北市大安區和平東路2段134號</p>
-                <p>電話：02-2732-1104</p>
+    <!-- 原本的網站內容 -->
+    <div id="main-content">
+        <!--header目錄-->
+        <header class="header">
+            <a class="header_logo" href="index.html"><img src="./img/logo.svg" alt="logo_img"></a>
+            <ul class="header-nav-list">
+                <li class="header-nav-list-item"><a href="./index.html" class="header-nav-list-link">關於我們</a></li>
+                <li class="header-nav-list-item"><a href="./product.html" class="header-nav-list-link">販售商品</a></li>
+                <li class="header-nav-list-item"><a href="./movie.html" class="header-nav-list-link">影院資訊</a></li>
+                <li class="header-nav-list-item"><a href="./order.html" class="header-nav-list-link">電影訂票</a></li>
+            </ul>
+            <!-- 漢堡按鈕（手機版） -->
+            <div class="burger_btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </div>
+            <!-- 漢堡選單結束 -->
 
-        <ul class="footer-nav-list">
-            <li class="footer-nav-list-item"><a href="./index.html" class="footer-nav-list-link">關於我們</a></li>
-            <li class="footer-nav-list-item"><a href="./product.html" class="footer-nav-list-link">販售商品</a></li>
-            <li class="footer-nav-list-item"><a href="./movie.html" class="footer-nav-list-link">影院資訊</a></li>
-            <li class="footer-nav-list-item"><a href="./order.html" class="footer-nav-list-link">電影訂票</a></li>
-        </ul>
-    </footer>
+        </header>
 
+        <!-- 漢堡選單 -->
+        <!-- 側邊選單 -->
+        <nav class="mobile_menu">
+            <ul>
+                <li><a href="./index.html">關於我們</a></li>
+                <li><a href="./product.html">販售商品</a></li>
+                <li><a href="./movie.html">影院資訊</a></li>
+                <li><a href="./order.html">電影訂票</a></li>
+            </ul>
+        </nav>
+
+        <!-- 遮罩 -->
+        <div class="menu_overlay" onclick="toggleMenu()"></div>
+        <!-- 漢堡選單結束 -->
+
+
+        <!--main主要內容-->
+        <main class="main">
+            <div class="container">
+                <section class="banner">
+                    <picture>
+                        <source srcset="./img/hero.svg" media="(min-width: 1200px)"> <!--桌機版:比1200還大的時候-->
+                        <source srcset="./img/hero_t.svg" media="(min-width: 768px)"> <!--平板版-->
+                        <img src="./img/hero_m.svg" alt="banner_img"> <!--手機版-->
+                    </picture>
+                </section>
+                <section class="content">
+                    <div class="block_1"><!--第一塊圖+文-->
+                        <p>玻璃罐裡裝著時間，<br>糖果的甜在空氣裡化開。</p>
+                        <picture>
+                            <source srcset="./img/main_1.svg" media="(min-width: 1200px)">
+                            <source srcset="./img/main_1_t.svg" media="(min-width: 768px)">
+                            <img src="./img/main_1_m.svg" alt="candy_img">
+                        </picture>
+                    </div>
+                    <div class="block_2"><!--第二塊圖-->
+                        <picture>
+                            <source srcset="./img/main_2.svg" media="(min-width: 1200px)">
+                            <source srcset="./img/main_2_t.svg" media="(min-width: 768px)">
+                            <img src="./img/main_2_m.svg" alt="movie1_img">
+                        </picture>
+                        <p>二樓的電影散發著柔光，<br>照亮一段舊日子。</p>
+                    </div>
+                    <div class="block_3"><!--三塊文+圖-->
+                        <picture>
+                            <source srcset="./img/main_3.svg" media="(min-width: 1200px)">
+                            <source srcset="./img/main_3_t.svg" media="(min-width: 768px)">
+                            <img src="./img/main_3_m.svg" alt="movie2_img">
+                        </picture>
+                        <p>柑仔店，<br>永遠開在那個午後。</p>
+                    </div>
+                </section>
+                <section class="aboutus"><!--關於我們文＋圖-->
+                    <picture>
+                        <source srcset="./img/main_4.svg" media="(min-width: 1200px)">
+                        <source srcset="./img/main_4_t.svg" media="(min-width: 768px)">
+                        <img src="./img/main_4_m.svg" alt="aboutus_img">
+                    </picture>
+                    <div class="aboutus_text">
+
+                        <!-- 手機版 -->
+                        <p class="aboutus_p mobile">
+                            我們相信，時間不會帶走一切，<br>
+                            有些記憶會留在某些地方。<br>
+                            柑仔店對我們來說不只是零食的地方，<br>
+                            是一段可以「被重訪的時間」。<br><br>
+                            在這裡，<br>
+                            我們把那份單純的快樂重新拼起來，<br>
+                            讓柑仔影院成為一個能讓大家<br>
+                            「重訪過去」的地方。
+                        </p>
+
+                        <!-- 平板版 -->
+                        <p class="aboutus_p tablet">
+                            我們相信，時間不會帶走一切，<br>
+                            有些記憶會留在某些地方。<br>
+                            柑仔店，<br>
+                            對我們來說不只是零食的地方，<br>
+                            是一段可以「被重訪的時間」。<br><br>
+                            在這裡，<br>我們把那份單純的快樂<br>重新拼起來，<br>
+                            讓柑仔影院成為一個能讓大家「重訪過去」的地方。
+                        </p>
+
+                        <!-- 桌機版 -->
+                        <p class="aboutus_p desktop">
+                            我們相信，時間不會帶走一切，<br>
+                            有些記憶會留在某些地方。<br>
+                            柑仔店對我們來說不只是零食的地方，<br>
+                            是一段可以「被重訪的時間」。<br><br>
+                            在這裡，<br>
+                            我們把那份單純的快樂重新拼起來，<br>
+                            讓柑仔影院成為一個能讓大家「重訪過去」的地方。
+                        </p>
+
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!--回到頂部的按鈕-->
+        <button id="backToTopBtn" class="back-to-top-btn" title="回到頂部">
+            ↑
+        </button>
+
+        <script src="./js/button.js"></script>
+        <script src="./js/fadein.js"></script>
+        <script src="./js/burger.js"></script>
+
+        <footer class="footer"><!--footer目錄-->
+            <div class="footer_left">
+                <a class="footer_logo" href="./index.html">
+                    <picture>
+                        <source srcset="./img/logo.svg" media="(min-width: 1200px)">
+                        <source srcset="./img/logo.svg" media="(min-width: 768px)">
+                        <img src="./img/logo.svg" alt="logo_img">
+                    </picture>
+                </a>
+                <div class="footer_info">
+                    <p>地址：臺北市大安區和平東路2段134號</p>
+                    <p>電話：02-2732-1104</p>
+                </div>
+            </div>
+
+            <ul class="footer-nav-list">
+                <li class="footer-nav-list-item"><a href="./index.html" class="footer-nav-list-link">關於我們</a></li>
+                <li class="footer-nav-list-item"><a href="./product.html" class="footer-nav-list-link">販售商品</a></li>
+                <li class="footer-nav-list-item"><a href="./movie.html" class="footer-nav-list-link">影院資訊</a></li>
+                <li class="footer-nav-list-item"><a href="./order.html" class="footer-nav-list-link">電影訂票</a></li>
+            </ul>
+        </footer>
+    </div>
 </body>
 
 </html>

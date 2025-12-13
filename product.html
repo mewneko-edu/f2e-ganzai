@@ -4,6 +4,8 @@
 <head>
     <title>販售商品-柑仔影院</title>
     <meta charset="UTF-8">
+    <!--RWD-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS & favicon-->
     <link rel="stylesheet" href="CSS/all_style.css">
     <link rel="stylesheet" href="./CSS/product.css">
@@ -24,12 +26,38 @@
             <li class="header-nav-list-item"><a href="./movie.html" class="header-nav-list-link">影院資訊</a></li>
             <li class="header-nav-list-item"><a href="./order.html" class="header-nav-list-link">電影訂票</a></li>
         </ul>
+        <!-- 漢堡選單（手機版） -->
+        <div class="burger_btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- 漢堡選單結束 -->
     </header>
+
+    <!-- 漢堡選單 -->
+    <!-- 側邊選單 -->
+    <nav class="mobile_menu">
+        <ul>
+            <li><a href="./index.html">關於我們</a></li>
+            <li><a href="./product.html">販售商品</a></li>
+            <li><a href="./movie.html">影院資訊</a></li>
+            <li><a href="./order.html">電影訂票</a></li>
+        </ul>
+    </nav>
+
+    <!-- 遮罩 -->
+    <div class="menu_overlay" onclick="toggleMenu()"></div>
+    <!-- 漢堡選單結束 -->
 
     <main class="main">
 
         <section class="banner">
-            <img src="./img/hero_product.svg" alt="P_banner_img">
+            <picture>
+                <source srcset="./img/hero_product.svg" media="(min-width: 1200px)">
+                <source srcset="./img/hero_product_t.svg" media="(min-width: 768px)">
+                <img src="./img/hero_product_m.svg" alt="P_banner_img">
+            </picture>
         </section>
 
         <section class="product-row gray">
@@ -37,7 +65,11 @@
             <div class="product-card">
                 <p>可樂橡皮糖</p>
                 <div class="product-content">
-                    <img src="./img/P/可樂橡皮糖.png" alt="可樂橡皮糖">
+                    <picture>
+                        <source srcset="./img/P/可樂橡皮糖.png" media="(min-width: 1200px)">
+                        <source srcset="./img/P/可樂橡皮糖.png" media="(min-width: 768px)">
+                        <img src="./img/P/可樂橡皮糖.png" alt="可樂橡皮糖">
+                    </picture>
                     <div class="product-overlay">
                         <p>Q彈微酸，咬下去就是童年味。</p>
                     </div>
@@ -47,7 +79,11 @@
             <div class="product-card">
                 <p>牙膏巧克力</p>
                 <div class="product-content">
-                    <img src="./img/P/牙膏巧克力.png" alt="牙膏巧克力">
+                    <picture>
+                        <source srcset="./img/P/牙膏巧克力.png" media="(min-width: 1200px)">
+                        <source srcset="./img/P/牙膏巧克力.png" media="(min-width: 768px)">
+                        <img src="./img/P/牙膏巧克力.png" alt="牙膏巧克力">
+                    </picture>
                     <div class="product-overlay">
                         <p>擠出來的不是薄荷牙膏，<br>是甜甜巧克力。</p>
                     </div>
@@ -57,7 +93,11 @@
             <div class="product-card">
                 <p>口紅糖</p>
                 <div class="product-content">
-                    <img src="./img/P/口紅糖.png" alt="口紅糖">
+                    <picture>
+                        <source srcset="./img/P/口紅糖.png" media="(min-width: 1200px)">
+                        <source srcset="./img/P/口紅糖.png" media="(min-width: 768px)">
+                        <img src="./img/P/口紅糖.png" alt="口紅糖">
+                    </picture>
                     <div class="product-overlay">
                         <p>邊擦邊吃，滿嘴紅甜。</p>
                     </div>
@@ -71,7 +111,11 @@
             <div class="product-card">
                 <p>嗶嗶糖</p>
                 <div class="product-content">
-                    <img src="./img/P/嗶嗶糖.png" alt="嗶嗶糖">
+                    <picture>
+                        <source srcset="./img/P/嗶嗶糖.png" media="(min-width: 1200px)">
+                        <source srcset="./img/P/嗶嗶糖.png" media="(min-width: 768px)">
+                        <img src="./img/P/嗶嗶糖.png" alt="嗶嗶糖">
+                    </picture>
                     <div class="product-overlay">
                         <p>吃著吃著就覺得吵，<br>但也吃著吃著笑出嗶聲</p>
                     </div>
@@ -81,7 +125,11 @@
             <div class="product-card">
                 <p>麵茶粉</p>
                 <div class="product-content">
-                    <img src="./img/P/麵茶粉.png" alt="麵茶粉">
+                    <picture>
+                        <source srcset="./img/P/麵茶粉.png" media="(min-width: 1200px)">
+                        <source srcset="./img/P/麵茶粉.png" media="(min-width: 768px)">
+                        <img src="./img/P/麵茶粉.png" alt="麵茶粉">
+                    </picture>
                     <div class="product-overlay">
                         <p>一口濃濃的花生香味，<br>古早味香氣滿分。</p>
                     </div>
@@ -91,7 +139,11 @@
             <div class="product-card">
                 <p>足球巧克力</p>
                 <div class="product-content">
-                    <img src="./img/P/足球巧克力.png" alt="足球巧克力">
+                    <picture>
+                        <source srcset="./img/P/足球巧克力.png" media="(min-width: 1200px)">
+                        <source srcset="./img/P/足球巧克力.png" media="(min-width: 768px)">
+                        <img src="./img/P/足球巧克力.png" alt="足球巧克力">
+                    </picture>
                     <div class="product-overlay">
                         <p>開球啦！小小一顆，大大滿足。</p>
                     </div>
@@ -105,7 +157,11 @@
             <div class="product-card">
                 <p>陀螺</p>
                 <div class="product-content">
-                    <img src="./img/P/陀螺.png" alt="陀螺">
+                    <picture>
+                        <source srcset="./img/P/陀螺.png" media="(min-width: 1200px)">
+                        <source srcset="./img/P/陀螺.png" media="(min-width: 768px)">
+                        <img src="./img/P/陀螺.png" alt="陀螺">
+                    </picture>
                     <div class="product-overlay">
                         <p>一揮就轉，轉動童年。</p>
                     </div>
@@ -115,7 +171,11 @@
             <div class="product-card">
                 <p>木製玉劍</p>
                 <div class="product-content">
-                    <img src="./img/P/劍玉.png" alt="劍玉">
+                    <picture>
+                        <source srcset="./img/P/劍玉.png" media="(min-width: 1200px)">
+                        <source srcset="./img/P/劍玉.png" media="(min-width: 768px)">
+                        <img src="./img/P/劍玉.png" alt="劍玉">
+                    </picture>
                     <div class="product-overlay">
                         <p>挑戰眼力與協調，<br>一次就上癮的經典玩具。</p>
                     </div>
@@ -125,7 +185,12 @@
             <div class="product-card">
                 <p>溜溜球</p>
                 <div class="product-content">
-                    <img src="./img/P/溜溜球.png" alt="溜溜球">
+                    <picture>
+                        <source srcset="./img/P/溜溜球.png" media="(min-width: 1200px)">
+                        <source srcset="./img/P/溜溜球.png" media="(min-width: 768px)">
+                        <img src="./img/P/溜溜球.png" alt="溜溜球">
+                    </picture>
+
                     <div class="product-overlay">
                         <p>上上下下，愛不釋手。</p>
                     </div>
@@ -142,11 +207,18 @@
     </button>
 
     <script src="./js/button.js"></script>
+    <script src="./js/burger.js"></script>
 
     <!--footer目錄-->
     <footer class="footer"><!--footer目錄-->
         <div class="footer_left">
-            <a class="footer_logo" href="./index.html"><img src="./img/logo.svg" alt="logo_img"></a>
+            <a class="footer_logo" href="./index.html">
+                <picture>
+                    <source srcset="./img/logo.svg" media="(min-width: 1200px)">
+                    <source srcset="./img/logo.svg" media="(min-width: 768px)">
+                    <img src="./img/logo.svg" alt="logo_img">
+                </picture>
+            </a>
             <div class="footer_info">
                 <p>地址：臺北市大安區和平東路2段134號</p>
                 <p>電話：02-2732-1104</p>

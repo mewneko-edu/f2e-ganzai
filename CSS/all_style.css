@@ -3,8 +3,6 @@
 /* header、footer、btc-btn 等共同設定也皆在內 */
 /* 此檔案以mobile first設計 */
 
-
-
 html {
     box-sizing: border-box;
 }
@@ -32,25 +30,43 @@ body {
     align-items: center;
     width: 100%;
     height: 84px;
-    margin-left: auto;
-    margin-right: auto;
     background-color: #FDFFE9;
+    padding: 0 15px;
 }
 
 .header_logo {
-    margin-left: 30px;
+    margin: 0 !important;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header {
+        padding: 0 60px;
+    }
 }
 
 .header-nav-list {
     display: flex;
-    margin: 0 58px 0 0;
+    margin: 0 50px 0 0;
     padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .header-nav-list {
+        margin: 0;
+    }
 }
 
 .header-nav-list-item {
     list-style: none;
     margin-left: 15px;
 }
+
 
 /* 導覽列連結一般狀態 */
 .header-nav-list-link {
@@ -65,13 +81,113 @@ body {
 }
 
 .header_burgur {
-    display: flex;
-    width: 10%;
-    height: 30%;
-    padding: 0;
     margin: 0;
-    right: 10px;
+    width: 30px;
+    /* 固定像素 (避免 10% 導致縮放時跑位) */
+    height: auto;
 }
+
+/*測試中的漢堡按鈕 */
+.burger_btn {
+    width: 28px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1200;
+}
+
+.burger_btn span {
+    display: block;
+    height: 4px;
+    background: #E60000;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* 漢堡變 X */
+.burger_btn.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.burger_btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger_btn.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ===== 側邊選單樣式 ===== */
+.mobile_menu {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    /* 初始隱藏 */
+    width: 260px;
+    height: 100vh;
+    background: #FFF9E6;
+    padding: 80px 20px;
+    transition: 0.35s ease;
+    z-index: 1100;
+}
+
+.mobile_menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile_menu li {
+    margin-bottom: 25px;
+}
+
+.mobile_menu a {
+    color: #E60000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* 選單展開 */
+.mobile_menu.active {
+    right: 0;
+}
+
+/* ===== 遮罩 ===== */
+.menu_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.menu_overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/* 平板以上隱藏漢堡，保留原始選單 */
+@media (min-width: 768px) {
+    .burger_btn {
+        display: none;
+    }
+
+    .mobile_menu,
+    .menu_overlay {
+        display: none;
+    }
+}
+
+/* 漢堡測試結束 */
 
 /* 滑鼠移上去時放大 */
 .header-nav-list-link:hover {
@@ -177,25 +293,13 @@ body {
     text-decoration: none;
 }
 
+/* 平板及電腦的時候，隱藏漢堡並且顯示完整的選單 */
 @media screen and (min-width: 768px) {
-    .header_logo {
-        margin-left: 60px;
-    }
-
     .header-nav-list-link {
         display: block;
     }
 
     .header_burgur {
         display: none;
-    }
-
-    .footer-nav-list {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        text-align: right;
     }
 }

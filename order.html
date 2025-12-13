@@ -4,6 +4,8 @@
 <head>
     <title>電影票訂購-柑仔影院</title>
     <meta charset="UTF-8">
+    <!--RWD-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS & favicon-->
     <link rel="stylesheet" href="CSS/all_style.css">
     <link rel="stylesheet" href="./CSS/order.css">
@@ -34,11 +36,37 @@
             <li class="header-nav-list-item"><a href="./movie.html" class="header-nav-list-link">影院資訊</a></li>
             <li class="header-nav-list-item"><a href="./order.html" class="header-nav-list-link">電影訂票</a></li>
         </ul>
+        <!-- 漢堡選單（手機版） -->
+        <div class="burger_btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- 漢堡選單結束 -->
     </header>
+
+    <!-- 漢堡選單 -->
+    <!-- 側邊選單 -->
+    <nav class="mobile_menu">
+        <ul>
+            <li><a href="./index.html">關於我們</a></li>
+            <li><a href="./product.html">販售商品</a></li>
+            <li><a href="./movie.html">影院資訊</a></li>
+            <li><a href="./order.html">電影訂票</a></li>
+        </ul>
+    </nav>
+
+    <!-- 遮罩 -->
+    <div class="menu_overlay" onclick="toggleMenu()"></div>
+    <!-- 漢堡選單結束 -->
 
     <main class="main">
         <section class="banner">
-            <img src="./img/hero_order.svg" alt="banner_img"><!--橫幅圖片:電影票訂購-->
+            <picture>
+                <source srcset="./img/hero_order.svg" media="(min-width: 1200px)">
+                <source srcset="./img/hero_order.svg" media="(min-width: 768px)">
+                <img src="./img/hero_order.svg" alt="banner_img"><!--橫幅圖片:電影票訂購-->
+            </picture>
         </section>
 
         <section class="content">
@@ -47,8 +75,14 @@
                     營業時間為：10:00 - 21:00，每週一公休。<br>
                     購票資訊：150元/張<br>
                     購票方式：本院因座位有限因此採線上購票，一次限購四張。<br>
-                    購票後請至柑仔影院一樓的收銀台選擇想看的影片及劃位。</p>
-                <img src="./img/order_movie.svg" alt="ordermovie_img">
+                    購票後請至柑仔影院一樓的收銀台選擇想看的影片及劃位。
+                </p>
+
+                <picture>
+                    <source srcset="./img/order_movie.svg" media="(min-width: 1200px)">
+                    <source srcset="./img/order_movie.svg" media="(min-width: 768px)">
+                    <img src="./img/order_movie_m.svg" alt="ordermovie_img">
+                </picture>
             </div>
         </section>
 
@@ -101,10 +135,17 @@
     </button>
 
     <script src="./js/button.js"></script>
+    <script src="./js/burger.js"></script>
 
     <footer class="footer"><!--footer目錄-->
         <div class="footer_left">
-            <a class="footer_logo" href="./index.html"><img src="./img/logo.svg" alt="logo_img"></a>
+            <a class="footer_logo" href="./index.html">
+                <picture>
+                    <source srcset="./img/logo.svg" media="(min-width: 1200px)">
+                    <source srcset="./img/logo.svg" media="(min-width: 768px)">
+                    <img src="./img/logo.svg" alt="logo_img">
+                </picture>
+            </a>
             <div class="footer_info">
                 <p>地址：臺北市大安區和平東路2段134號</p>
                 <p>電話：02-2732-1104</p>
