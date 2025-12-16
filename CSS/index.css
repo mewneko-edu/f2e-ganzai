@@ -265,7 +265,7 @@
   .aboutus_text {
     top: 50%;
     left: 57%;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 2;
   }
 
@@ -280,6 +280,15 @@
 }
 
 .fade-in {
+  opacity: 1;
+}
+
+.fade-target {
+  opacity: 0;
+  transition: opacity 1.2s ease-out;
+}
+
+.fade-target.fade-in {
   opacity: 1;
 }
 
