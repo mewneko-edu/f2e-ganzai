@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="icon" href="img/favicon.ico">
     <script src="./js/loading.js"></script>
+    <script src="./js/scroll-animate.js"></script>
     <!--google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,14 +121,15 @@
             </section>
             <section class="content">
                 <div class="block_1"><!--第一塊圖+文-->
-
                     <p class="fade-target">玻璃罐裡裝著時間，<br>糖果的甜在空氣裡化開。</p>
                     <picture>
                         <source srcset="./img/main_1.svg" media="(min-width: 1200px)">
                         <source srcset="./img/main_1_t.svg" media="(min-width: 768px)">
                         <img src="./img/main_1_m.svg" alt="candy_img">
                     </picture>
-
+                    <img class="jar js-animate desktop" src="./img/main_1_jar.svg" alt="糖果罐">
+                    <img class="jar js-animate tablet" src="./img/main_1_jar_t.svg" alt="糖果罐_m">
+                    <img class="jar js-animate mobile" src="./img/main_1_jar_m.svg" alt="糖果罐_m">
                 </div>
                 <div class="block_2"><!--第二塊圖-->
                     <picture>
