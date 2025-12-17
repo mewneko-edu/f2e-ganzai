@@ -92,32 +92,32 @@
   /* 不影響滑鼠 */
 }
 
-.banner-anim .tablet,
-.banner-anim .mobile {
+.banner-anim.tablet,
+.banner-anim.mobile {
   display: none;
 }
 
-.banner-anim .desktop {
+.banner-anim.desktop {
   display: block;
 }
 
-@media (max-width: 1199px) {
-  .banner-anim .desktop,
-  .banner-anim .mobile {
+@media (max-width: 1199px) and (min-width: 768px) {
+  .banner-anim.desktop,
+  .banner-anim.mobile {
     display: none;
   }
-  .banner-anim .tablet {
+  .banner-anim.tablet {
     display: block;
   }
 }
 
 /* 手機 */
 @media (max-width: 767px) {
-  .banner-anim .desktop,
-  .banner-anim .tablet {
+  .banner-anim.desktop,
+  .banner-anim.tablet {
     display: none;
   }
-  .banner-anim .mobile {
+  .banner-anim.mobile {
     display: block;
   }
 }
