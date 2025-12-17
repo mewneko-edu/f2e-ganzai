@@ -92,6 +92,36 @@
   /* 不影響滑鼠 */
 }
 
+.banner-anim .tablet,
+.banner-anim .mobile {
+  display: none;
+}
+
+.banner-anim .desktop {
+  display: block;
+}
+
+@media (max-width: 1199px) {
+  .banner-anim .desktop,
+  .banner-anim .mobile {
+    display: none;
+  }
+  .banner-anim .tablet {
+    display: block;
+  }
+}
+
+/* 手機 */
+@media (max-width: 767px) {
+  .banner-anim .desktop,
+  .banner-anim .tablet {
+    display: none;
+  }
+  .banner-anim .mobile {
+    display: block;
+  }
+}
+
 .title {
   opacity: 0;
   transform: translateY(20px);
