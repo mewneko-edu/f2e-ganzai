@@ -157,7 +157,6 @@
   display: block;
 }
 
-
 @media (max-width: 1199px) and (min-width: 768px) {
   .jar.desktop,
   .jar.mobile {
