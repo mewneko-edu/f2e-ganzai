@@ -18,4 +18,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   animatedItems.forEach(item => observer.observe(item));
 });
-
