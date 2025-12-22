@@ -78,15 +78,52 @@
   display: block;
 }
 
+/* 糖果位置設定 */
+.banner-candy {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
 
-/* 動畫層只是「貼上去」 */
+.banner-candy.tablet,
+.banner-candy.mobile {
+  display: none;
+}
+
+.banner-candy.desktop {
+  display: block;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .banner-candy.desktop,
+  .banner-candy.mobile {
+    display: none;
+  }
+  .banner-candy.tablet {
+    display: block;
+  }
+}
+
+/* 手機 */
+@media (max-width: 767px) {
+  .banner-candy.desktop,
+  .banner-candy.tablet {
+    display: none;
+  }
+  .banner-candy.mobile {
+    display: block;
+  }
+}
+
+/* 標題位置設定 */
 .banner-anim {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  /* 不影響滑鼠 */
 }
 
 .banner-anim.tablet,
@@ -127,13 +164,12 @@
   /* 移除這裡的 animation */
 }
 
-/* 【關鍵】當 body 有 page-loaded 時，裡面的 .title 才開始跑動畫 */
+/* 當 body 有 page-loaded，.title 就開始跑動畫 */
 body.page-loaded .title {
   animation: fadeUp 0.8s ease-out forwards;
 }
 
-/* 重新設定延遲時間 (Delay) */
-/* 因為 Loading 已經消失了，這裡的時間可以設短一點，不用再等 2.4秒了 */
+/* 延遲時間 */
 body.page-loaded .t1 {
   animation-delay: 0.2s; /* 第一行字 */
 }
