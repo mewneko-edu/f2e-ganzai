@@ -29,6 +29,14 @@
 </head>
 
 <body style="background-color: #d4433e;">
+    <!-- Loading 畫面 -->
+    <div id="loading">
+        <div class="loading-content">
+            <img src="./img/candy_1.svg" alt="candy">
+            <p>loading</p>
+        </div>
+    </div>
+    
     <!--header目錄-->
     <header class="header">
         <a class="header_logo" href="./index.html"><img src="./img/logo.svg" alt="logo_img"></a>
@@ -67,7 +75,7 @@
 
     <!--main內容-->
     <main class="main">
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleAutoplaying" class="carousel slide desktop" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -81,10 +89,72 @@
                     <img src="./img/hero_movie.svg" class="d-block w-100" alt="P_banner_img">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/hero_movie.svg" class="d-block w-100" alt="P_banner_img">
+                    <img src="./img/hero_gundan.png" class="d-block w-100" alt="P_banner_img">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/hero_movie.svg" class="d-block w-100" alt="P_banner_img">
+                    <img src="./img/hero_gundan.png" class="d-block w-100" alt="P_banner_img">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div id="carouselExampleAutoplaying" class="carousel slide tablet" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/hero_movie_t.svg" class="d-block w-100" alt="P_banner_img">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/hero_gundan_t.png" class="d-block w-100" alt="P_banner_img">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/hero_gundan_t.png" class="d-block w-100" alt="P_banner_img">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div id="carouselExampleAutoplaying" class="carousel slide mobile" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/hero_movie_m.svg" class="d-block w-100 mobile" alt="P_banner_img">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/hero_gundan_m.png" class="d-block w-100 mobile" alt="P_banner_img">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/hero_gundan_m.png" class="d-block w-100 mobile" alt="P_banner_img">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -299,6 +369,7 @@
     <script src="./js/button.js"></script>
     <script src="./js/burger.js"></script>
     <script src="./js/movie.js"></script>
+    <script src="./js/loading.js"></script>
 
     <footer class="footer"><!--footer目錄-->
         <div class="footer_left">

@@ -13,6 +13,7 @@
     /* 超大型裝置 min-width: var(--xl_width); */
 }
 
+/* 阿姿複製用 */
 .tablet,
 .mobile {
   display: none;

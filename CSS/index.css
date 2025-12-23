@@ -3,7 +3,6 @@
   position: fixed;
   inset: 0;
   background-color: #f8f1dc; 
-  /* 復古淡黃 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,29 +160,28 @@
   transform: translateY(20px);
   transform-box: fill-box;
   transform-origin: center;
-  /* 移除這裡的 animation */
 }
 
-/* 當 body 有 page-loaded，.title 就開始跑動畫 */
+/* 當 body 有 page-loaded 時，裡面的 .title 才開始跑動畫 */
 body.page-loaded .title {
   animation: fadeUp 0.8s ease-out forwards;
 }
 
-/* 延遲時間 */
+/* 重新設定延遲時間 (Delay) */
 body.page-loaded .t1 {
-  animation-delay: 0.2s; /* 第一行字 */
+  animation-delay: 1.0s; /* 第一行字 */
 }
 
 body.page-loaded .t2 {
-  animation-delay: 0.4s; /* 第二行字 */
+  animation-delay: 1.2s; /* 第二行字 */
 }
 
 body.page-loaded .t3 {
-  animation-delay: 0.6s; /* 第三行字 */
+  animation-delay: 1.4s; /* 第三行字 */
 }
 
 body.page-loaded .t4 {
-  animation-delay: 0.8s; /* 第四行字 */
+  animation-delay: 1.6s; /* 第四行字 */
 }
 
 /* fadeUp 關鍵影格保持不變 */
