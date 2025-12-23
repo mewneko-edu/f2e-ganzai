@@ -27,14 +27,82 @@ body {
   display: block;
 }
 
-/* 動畫層只是「貼上去」 */
+/* 標題位置設定 */
 .banner-anim {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  /* 不影響滑鼠 */
+}
+
+.banner-anim.tablet,
+.banner-anim.mobile {
+  display: none;
+}
+
+.banner-anim.desktop {
+  display: block;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .banner-anim.desktop,
+  .banner-anim.mobile {
+    display: none;
+  }
+  .banner-anim.tablet {
+    display: block;
+  }
+}
+
+/* 手機 */
+@media (max-width: 767px) {
+  .banner-anim.desktop,
+  .banner-anim.tablet {
+    display: none;
+  }
+  .banner-anim.mobile {
+    display: block;
+  }
+}
+
+/* 糖果位置設定 */
+.banner-candy {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.banner-candy.tablet,
+.banner-candy.mobile {
+  display: none;
+}
+
+.banner-candy.desktop {
+  display: block;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .banner-candy.desktop,
+  .banner-candy.mobile {
+    display: none;
+  }
+  .banner-candy.tablet {
+    display: block;
+  }
+}
+
+/* 手機 */
+@media (max-width: 767px) {
+  .banner-candy.desktop,
+  .banner-candy.tablet {
+    display: none;
+  }
+  .banner-candy.mobile {
+    display: block;
+  }
 }
 
 .title {
