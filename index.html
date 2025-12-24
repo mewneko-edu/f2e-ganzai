@@ -12,10 +12,14 @@
     <link rel="icon" href="img/favicon.ico">
     <script src="./js/loading.js"></script>
     <script src="./js/scroll-animate.js"></script>
+    <script defer src="js/gacha.js"></script>
     <!--google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&display=swap" rel="stylesheet">
+    <!--swiper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./CSS/swiper.css" />
 </head>
 
 <body>
@@ -303,6 +307,40 @@
 
                 </div>
             </section>
+            <section class="movie-carousel">
+                <h2 class="carousel-title">上映影片</h2>
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide card" data-target="1"><img src="./img/M/美少女戰士.png" alt="電影海報1"></div>
+                        <div class="swiper-slide card" data-target="2"><img src="./img/M/藍色小精靈.png" alt="電影海報2"></div>
+                        <div class="swiper-slide card" data-target="3"><img src="./img/M/小紅豆.png" alt="電影海報3"></div>
+                        <div class="swiper-slide card" data-target="4"><img src="./img/M/北海小英雄.png" alt="電影海報4"></div>
+                        <div class="swiper-slide card" data-target="5"><img src="./img/M/頑皮豹.png" alt="電影海報5"></div>
+                        <div class="swiper-slide card" data-target="6"><img src="./img/M/原子小金剛.png" alt="電影海報6"></div>
+                        <div class="swiper-slide card" data-target="7"><img src="./img/M/鋼彈.png" alt="電影海報7"></div>
+                        <div class="swiper-slide card" data-target="8"><img src="./img/M/米奇.png" alt="電影海報8"></div>
+                    </div>
+
+                    <!-- Swiper 控制元件 -->
+                    <!-- Swiper 控制元件 -->
+                    <div class="swiper-button-prev custom-arrow" aria-label="上一張"></div>
+                    <div class="swiper-button-next custom-arrow" aria-label="下一張"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+        </div>
+        </section>
+        </div>
+        <div class="gacha">
+            <div class="machine">
+                <img src="./img/main_1_jar.svg" alt="柑仔機" class="machine-img">
+
+                <img src="./img/main_1_candy.svg" alt="糖果" class="candy" id="candy">
+            </div>
+
+            <button id="drawBtn">抽一顆 🍬</button>
+
+            <p class="result" id="result"></p>
         </div>
     </main>
 

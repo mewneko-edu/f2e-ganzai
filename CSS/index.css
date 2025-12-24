@@ -1029,3 +1029,62 @@ body.page-loaded .js-animate.is-visible.green {
   overflow: visible;
   /* 確保可被偵測 */
 }
+
+.gacha {
+  text-align: center;
+  margin: 100px auto;
+}
+
+.machine {
+  position: relative;
+  width: 500px;
+  margin: 0 auto 20px;
+}
+
+.machine-img {
+  width: 100%;
+}
+
+.candy {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 25%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+/* 抽的時候 */
+.candy.is-rolling {
+  animation: dropSpin 1.2s ease-out forwards;
+}
+
+@keyframes dropSpin {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -150%) rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 80%) rotate(720deg);
+  }
+}
+
+button {
+  padding: 20px 34px;
+  font-size: 18px;
+  border-radius: 999px;
+  border: none;
+  background: #e60000;
+  color: white;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #e60000;
+}
