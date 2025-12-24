@@ -77,107 +77,93 @@
   display: block;
 }
 
-.desktop.c1{
+/* 糖果位置設定 */
+.banner-candy {
   position: absolute;
-  top: 25%;
-  left: 15%;
-  transform: translate(-50%, -50%);
+  transform-box: fill-box;
+  transform-origin: center center;
+  /* transition: transform 0.6s ease; */
+  pointer-events: auto; /* 開啟鼠標互動，不要的時候none */
+  animation: wiggle 1.6s ease-in-out infinite;
+}
+
+.banner-candy.c1{
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  transform: translate(0%, 0%);
   width: 20%;
   height: auto;
+  transform-origin: center center;
 }
-.desktop.c2{
+.banner-candy.c2{
   position: absolute;
-  top: 22%;
-  left: 37%;
-  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 30%;
+  transform: translate(0%, 0%);
   width: 10%;
   height: auto;
 }
-.desktop.c3{
+.banner-candy.c3{
   position: absolute;
-  top: 21%;
-  left: 65%;
-  transform: translate(-50%, -50%);
+  top: 7%;
+  left: 50%;
+  transform: translate(0%, 0%);
   width: 25%;
   height: auto;
 }
-.desktop.c4{
+.banner-candy.c4{
   position: absolute;
-  top: 30%;
-  left: 87%;
-  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 80%;
+  transform: translate(0%, 0%);
   width: 13%;
   height: auto;
 }
-.desktop.c5{
+.banner-candy.c5{
   position: absolute;
-  top: 75%;
-  left: 87%;
-  transform: translate(-50%, -50%);
+  top: 55%;
+  left: 75%;
+  transform: translate(0%, 0%);
   width: 18%;
   height: auto;
 }
-.desktop.c6{
+.banner-candy.c6{
   position: absolute;
-  top: 80%;
-  left: 65%;
-  transform: translate(-50%, -50%);
+  top: 70%;
+  left: 53%;
+  transform: translate(0%, 0%);
   width: 18%;
   height: auto;
 }
-.desktop.c7{
+.banner-candy.c7{
   position: absolute;
-  top: 80%;
-  left: 45%;
-  transform: translate(-50%, -50%);
+  top: 70%;
+  left: 35%;
+  transform: translate(0%, 0%);
   width: 16%;
   height: auto;
 }
-.desktop.c8{
+.banner-candy.c8{
   position: absolute;
-  top: 75%;
-  left: 24%;
-  transform: translate(-50%, -50%);
+  top: 62%;
+  left: 18%;
+  transform: translate(0%, 0%);
   width: 12%;
   height: auto;
 }
 .desktop.c9{
   position: absolute;
-  top: 65%;
-  left: 10%;
-  transform: translate(-50%, -50%);
+  top: 52%;
+  left: 5%;
+  transform: translate(0%, 0%);
   width: 13%;
   height: auto;
 }
 
-/* 糖果位置設定 */
-.banner-candy {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.banner-candy.tablet,
-.banner-candy.mobile {
-  display: none;
-}
-
-.banner-candy.desktop {
-  display: block;
-}
-
-/* 所有糖果的共通設定 */
-.banner-candy {
-  transform-origin: center;
-  transition: transform 0.6s ease;
-  pointer-events: auto; /* 你之前有設 none，這裡要打開 */
-}
-
 /* 滑鼠靠近 */
 .banner-candy.desktop:hover {
-  transform: scale(1.05);
+  animation: spin 1.2s infinite linear;
 }
 
 @keyframes wiggle {
@@ -191,6 +177,15 @@
 .banner-candy.tablet,
 .banner-candy.mobile {
   display: none;
+}
+
+.banner-candy.tablet,
+.banner-candy.mobile {
+  display: none;
+}
+
+.banner-candy.desktop {
+  display: block;
 }
 
 
@@ -256,7 +251,7 @@
 
 .title {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translate(0%, 0%);
   transform-box: fill-box;
   transform-origin: center;
 }

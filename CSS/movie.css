@@ -125,6 +125,11 @@ body.page-loaded .title {
     align-items: center;
     text-align: center;
   }
+  .modal-info h2 {
+        text-align: center;
+        width: 100%;
+        margin-top: 15px; /* 增加一點點與上方圖片的間距，比較美觀 */
+    }
 }
 
 @media (min-width: 1200px) {
@@ -495,3 +500,9 @@ body.page-loaded .title {
     white-space: nowrap;
   }
 }
+
+  .movie-card:hover .detail-hint {
+    transform: translateX(-50%); /* 保持在中間，不要位移 5px */
+    text-decoration: none;        /* 如果你也不想要底線出現，可以加這行 */
+    /* color: #d4433e; */         /* 如果希望連顏色都不要變，可以取消註解這行 */
+  }
