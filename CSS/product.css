@@ -27,79 +27,306 @@ body {
   display: block;
 }
 
-.banner-candy.c1{
+/* 糖果共同設定 */
+.banner-candy {
   position: absolute;
-  top: 25%;
-  left: 15%;
-  transform: translate(-50%, -50%);
-  width: 20%;
-  height: auto;
-}
-.banner-candy.c2{
-  position: absolute;
-  top: 22%;
-  left: 37%;
-  transform: translate(-50%, -50%);
-  width: 10%;
-  height: auto;
-}
-.banner-candy.c3{
-  position: absolute;
-  top: 21%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  width: 25%;
-  height: auto;
-}
-.banner-candy.c4{
-  position: absolute;
-  top: 30%;
-  left: 87%;
-  transform: translate(-50%, -50%);
-  width: 13%;
-  height: auto;
-}
-.banner-candy.c5{
-  position: absolute;
-  top: 75%;
-  left: 87%;
-  transform: translate(-50%, -50%);
-  width: 18%;
-  height: auto;
-}
-.banner-candy.c6{
-  position: absolute;
-  top: 80%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  width: 18%;
-  height: auto;
-}
-.banner-candy.c7{
-  position: absolute;
-  top: 80%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-  width: 16%;
-  height: auto;
-}
-.banner-candy.c8{
-  position: absolute;
-  top: 75%;
-  left: 24%;
-  transform: translate(-50%, -50%);
-  width: 12%;
-  height: auto;
-}
-.banner-candy.c9{
-  position: absolute;
-  top: 65%;
-  left: 10%;
-  transform: translate(-50%, -50%);
-  width: 13%;
-  height: auto;
+  transform-box: fill-box;
+  transform-origin: center center;
+  /* transition: transform 0.6s ease; */
+  pointer-events: auto;
+  /* 開啟鼠標互動，不要的時候none */
+  animation: wiggle 1.6s ease-in-out infinite;
 }
 
+/* 滑鼠靠近 */
+.banner-candy:hover {
+  animation: spin 1.2s infinite linear;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(8deg);
+  }
+
+  50% {
+    transform: rotate(-8deg);
+  }
+
+  75% {
+    transform: rotate(6deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* 電腦 糖果位置設定 */
+@media (min-width: 1200px) {
+  .banner-candy.c1 {
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    transform: translate(0%, 0%);
+    width: 20%;
+    height: auto;
+  }
+
+  .banner-candy.c2 {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    transform: translate(0%, 0%);
+    width: 10%;
+    height: auto;
+  }
+
+  .banner-candy.c3 {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(0%, 0%);
+    width: 25%;
+    height: auto;
+  }
+
+  .banner-candy.c4 {
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    transform: translate(0%, 0%);
+    width: 13%;
+    height: auto;
+  }
+
+  .banner-candy.c5 {
+    position: absolute;
+    top: 55%;
+    left: 75%;
+    transform: translate(0%, 0%);
+    width: 18%;
+    height: auto;
+  }
+
+  .banner-candy.c6 {
+    position: absolute;
+    top: 70%;
+    left: 53%;
+    transform: translate(0%, 0%);
+    width: 18%;
+    height: auto;
+  }
+
+  .banner-candy.c7 {
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    transform: translate(0%, 0%);
+    width: 16%;
+    height: auto;
+  }
+
+  .banner-candy.c8 {
+    position: absolute;
+    top: 62%;
+    left: 18%;
+    transform: translate(0%, 0%);
+    width: 12%;
+    height: auto;
+  }
+
+  .banner-candy.c9 {
+    position: absolute;
+    top: 52%;
+    left: 5%;
+    transform: translate(0%, 0%);
+    width: 13%;
+    height: auto;
+  }
+}
+
+/* 平板 糖果位置設定 */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .banner-candy.c1 {
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    transform: translate(0%, 0%);
+    width: 25%;
+    height: auto;
+    transform-origin: center center;
+  }
+
+  .banner-candy.c2 {
+    position: absolute;
+    top: 13%;
+    left: 33%;
+    transform: translate(0%, 0%);
+    width: 13%;
+    height: auto;
+  }
+
+  .banner-candy.c3 {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(0%, 0%);
+    width: 30%;
+    height: auto;
+  }
+
+  .banner-candy.c4 {
+    position: absolute;
+    top: 15%;
+    left: 80%;
+    transform: translate(0%, 0%);
+    width: 16%;
+    height: auto;
+  }
+
+  .banner-candy.c5 {
+    position: absolute;
+    top: 55%;
+    left: 78%;
+    transform: translate(0%, 0%);
+    width: 20%;
+    height: auto;
+  }
+
+  .banner-candy.c6 {
+    position: absolute;
+    top: 73%;
+    left: 53%;
+    transform: translate(0%, 0%);
+    width: 25%;
+    height: auto;
+  }
+
+  .banner-candy.c7 {
+    position: absolute;
+    top: 70%;
+    left: 33%;
+    transform: translate(0%, 0%);
+    width: 20%;
+    height: auto;
+  }
+
+  .banner-candy.c8 {
+    position: absolute;
+    top: 62%;
+    left: 13%;
+    transform: translate(0%, 0%);
+    width: 17%;
+    height: auto;
+  }
+
+  .banner-candy.c9 {
+    position: absolute;
+    top: 43%;
+    left: 3%;
+    transform: translate(0%, 0%);
+    width: 17%;
+    height: auto;
+  }
+}
+
+/* 手機 糖果位置設定 */
+@media (max-width: 767px) {
+  /* c7 */
+  .banner-candy.c1 {
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    transform: translate(0%, 0%);
+    width: 40%;
+    height: auto;
+    transform-origin: center center;
+  }
+
+  /* c5 */
+  .banner-candy.c2 {
+    position: absolute;
+    top: 25%;
+    left: 70%;
+    transform: translate(0%, 0%);
+    width: 23%;
+    height: auto;
+  }
+
+  /* c9 */
+  .banner-candy.c3 {
+    position: absolute;
+    top: 77%;
+    left: 25%;
+    transform: translate(0%, 0%);
+    width: 53%;
+    height: auto;
+  }
+
+  /* c8 */
+  .banner-candy.c4 {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    transform: translate(0%, 0%);
+    width: 24%;
+    height: auto;
+  }
+
+  /* c4 */
+  .banner-candy.c5 {
+    position: absolute;
+    top: 23%;
+    left: 32%;
+    transform: translate(0%, 0%);
+    width: 33%;
+    height: auto;
+  }
+
+  /* c6 */
+  .banner-candy.c6 {
+    position: absolute;
+    top: 60%;
+    left: 13%;
+    transform: translate(0%, 0%);
+    width: 35%;
+    height: auto;
+  }
+
+  /* c1 */
+  .banner-candy.c7 {
+    position: absolute;
+    top: 7%;
+    left: 12%;
+    transform: translate(0%, 0%);
+    width: 33%;
+    height: auto;
+  }
+
+  /* c2 */
+  .banner-candy.c8 {
+    position: absolute;
+    top: 5%;
+    left: 57%;
+    transform: translate(0%, 0%);
+    width: 25%;
+    height: auto;
+  }
+
+  /* c3 */
+  .banner-candy.c9 {
+    position: absolute;
+    top: 23%;
+    left: 5%;
+    transform: translate(0%, 0%);
+    width: 25%;
+    height: auto;
+  }
+}
 /* 標題位置設定 */
 .banner-anim {
   position: absolute;
@@ -139,49 +366,6 @@ body {
   }
 
   .banner-anim.mobile {
-    display: block;
-  }
-}
-
-/* 糖果位置設定 */
-.banner-candy {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.banner-candy.tablet,
-.banner-candy.mobile {
-  display: none;
-}
-
-.banner-candy.desktop {
-  display: block;
-}
-
-@media (max-width: 1199px) and (min-width: 768px) {
-
-  .banner-candy.desktop,
-  .banner-candy.mobile {
-    display: none;
-  }
-
-  .banner-candy.tablet {
-    display: block;
-  }
-}
-
-/* 手機 */
-@media (max-width: 767px) {
-
-  .banner-candy.desktop,
-  .banner-candy.tablet {
-    display: none;
-  }
-
-  .banner-candy.mobile {
     display: block;
   }
 }
