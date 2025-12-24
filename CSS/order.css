@@ -26,7 +26,56 @@
   width: 100%;
   height: auto;
   display: block;
-  /* 消掉 img 底下神秘白邊 */
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(8deg);
+  }
+
+  50% {
+    transform: rotate(-8deg);
+  }
+
+  75% {
+    transform: rotate(6deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pop {
+  position: absolute;
+  transform-box: fill-box;
+  transform-origin: center center;
+  pointer-events: auto;
+  /* 開啟鼠標互動，不要的時候none */
+  animation: wiggle 1.6s ease-in-out infinite;
+}
+.pop1 {
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    transform: translate(0%, 0%);
+    width: 20%;
+    height: auto;
+}
+.pop2 {
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    transform: translate(0%, 0%);
+    width: 20%;
+    height: auto;
+}
+.pop:hover {
+  animation: spin 1.2s infinite linear;
 }
 
 /* 標題位置設定 */
