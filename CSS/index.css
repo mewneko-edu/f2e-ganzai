@@ -786,7 +786,6 @@ body.page-loaded .js-animate.is-visible.green {
 }
 
 @media screen and (min-width: 768px) {
-
   /* 平板 */
   .block_1 p {
     font-size: 30px;
@@ -796,7 +795,6 @@ body.page-loaded .js-animate.is-visible.green {
 }
 
 @media screen and (min-width: 1200px) {
-
   /* 電腦 */
   .block_1 p {
     font-size: 36px;
@@ -939,7 +937,24 @@ body.page-loaded .js-animate.is-visible.green {
 .aboutus img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+}
+
+.house {
+  position: absolute;
+  transform-box: fill-box;
+  transform-origin: center center;
+  /* transition: transform 0.6s ease; */
+  pointer-events: none;
+  /* 開啟鼠標互動，不要的時候none */
+  /* animation: wiggle 1.6s ease-in-out infinite; */
+  opacity: 1;
+  inset: 0;
+  top: 5%;
+  left: -15%;
+  width: 10%;
+  transform: translateX(-180px);
+  
 }
 
 .aboutus_text {
@@ -1037,12 +1052,11 @@ body.page-loaded .js-animate.is-visible.green {
 
 .machine {
   position: relative;
-  width: 500px;
   margin: 0 auto 20px;
 }
 
 .machine-img {
-  width: 100%;
+  width: 20%;
 }
 
 .candy {
@@ -1064,16 +1078,18 @@ body.page-loaded .js-animate.is-visible.green {
     opacity: 0;
     transform: translate(-50%, -150%) rotate(0deg);
   }
+
   30% {
     opacity: 1;
   }
+
   100% {
     opacity: 1;
     transform: translate(-50%, 80%) rotate(720deg);
   }
 }
 
-button {
+.gacha button {
   padding: 20px 34px;
   font-size: 18px;
   border-radius: 999px;

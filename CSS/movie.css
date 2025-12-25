@@ -8,10 +8,12 @@
 }
 
 @media (max-width: 1199px) and (min-width: 768px) {
+
   .carousel.desktop,
   .carousel.mobile {
     display: none;
   }
+
   .carousel.tablet {
     display: block;
   }
@@ -19,10 +21,12 @@
 
 /* 手機 */
 @media (max-width: 767px) {
+
   .carousel.desktop,
   .carousel.tablet {
     display: none;
   }
+
   .carousel.mobile {
     display: block;
   }
@@ -125,11 +129,13 @@ body.page-loaded .title {
     align-items: center;
     text-align: center;
   }
+
   .modal-info h2 {
-        text-align: center;
-        width: 100%;
-        margin-top: 15px; /* 增加一點點與上方圖片的間距，比較美觀 */
-    }
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+    /* 增加一點點與上方圖片的間距，比較美觀 */
+  }
 }
 
 @media (min-width: 1200px) {
@@ -499,10 +505,13 @@ body.page-loaded .title {
     bottom: 20px;
     white-space: nowrap;
   }
-}
-
+  
   .movie-card:hover .detail-hint {
-    transform: translateX(-50%); /* 保持在中間，不要位移 5px */
-    text-decoration: none;        /* 如果你也不想要底線出現，可以加這行 */
-    /* color: #d4433e; */         /* 如果希望連顏色都不要變，可以取消註解這行 */
-  }
+  transform: translateX(-50%);
+  /* 保持在中間，不要位移 5px */
+  text-decoration: none;
+  /* 如果你也不想要底線出現，可以加這行 */
+  /* color: #d4433e; */
+  /* 如果希望連顏色都不要變，可以取消註解這行 */
+}
+}
