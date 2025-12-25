@@ -753,6 +753,7 @@ body.page-loaded .js-animate.is-visible.green {
     transform: translateX(0);
   }
 }
+
 @keyframes slideInRight {
   from {
     opacity: 0;
@@ -764,6 +765,7 @@ body.page-loaded .js-animate.is-visible.green {
     transform: translateX(0);
   }
 }
+
 @keyframes slideInDown {
   from {
     opacity: 0;
@@ -775,6 +777,7 @@ body.page-loaded .js-animate.is-visible.green {
     transform: translateY(0);
   }
 }
+
 @keyframes slideInUp {
   from {
     opacity: 0;
@@ -857,7 +860,46 @@ body.page-loaded .js-animate.is-visible.green {
   /* 移除圖片底部可能的多餘空間 */
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
+
+.stars {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  /* 背景層 */
+  pointer-events: none;
+}
+
+.stars::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  width: 10px;
+  height: 10px;
+  /* background: white; */
+  border-radius: 50%;
+
+  box-shadow:
+    30vw 50vh white,
+    30vw 70vh yellow,
+    50vw 55vh white,
+    70vw 10vh yellow,
+    90vw 60vh white,
+    20vw 30vh white,
+    60vw 70vh yellow,
+    80vw 30vh yellow;
+
+  animation: twinkle 1.5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+
 
 /* 手機 */
 .block_2 p {
@@ -932,6 +974,7 @@ body.page-loaded .js-animate.is-visible.green {
     height: auto;
     max-width: 13%;
   }
+
   .soda2 {
     position: absolute;
     top: 0%;
@@ -953,6 +996,7 @@ body.page-loaded .js-animate.is-visible.green {
     height: auto;
     max-width: 20%;
   }
+
   .soda2 {
     position: absolute;
     top: 0%;
@@ -974,6 +1018,7 @@ body.page-loaded .js-animate.is-visible.green {
     height: auto;
     max-width: 40%;
   }
+
   .soda2 {
     position: absolute;
     top: 0%;
@@ -989,6 +1034,7 @@ body.page-loaded .js-animate.is-visible.green {
 body.page-loaded .js-animate.is-visible.soda1 {
   animation: slideInLeft 0.8s ease-out forwards;
 }
+
 body.page-loaded .js-animate.is-visible.soda2 {
   animation: slideInRight 0.8s ease-out forwards;
 }
@@ -1001,6 +1047,7 @@ body.page-loaded .js-animate.is-visible.soda2 {
   transition: transform 0.6s ease;
   pointer-events: none;
 }
+
 @media (min-width: 1200px) {
   .board {
     position: absolute;
@@ -1012,6 +1059,7 @@ body.page-loaded .js-animate.is-visible.soda2 {
     max-width: 100%;
   }
 }
+
 @media (max-width: 1199px) and (min-width: 768px) {
   .board {
     position: absolute;
@@ -1023,6 +1071,7 @@ body.page-loaded .js-animate.is-visible.soda2 {
     max-width: 100%;
   }
 }
+
 @media (max-width: 767px) {
   .board {
     position: absolute;
@@ -1034,6 +1083,7 @@ body.page-loaded .js-animate.is-visible.soda2 {
     /* max-width: 95%; */
   }
 }
+
 /* 進畫面後 */
 body.page-loaded .js-animate.is-visible.board {
   animation: slideInUp 0.8s ease-out forwards;
@@ -1224,13 +1274,35 @@ body.page-loaded .js-animate.is-visible.house {
   transition: opacity 1.2s ease-out;
 }
 
+.footer_gatcha {
+  position: absolute;
+  transform-box: fill-box;
+  transform-origin: center center;
+  transition: transform 0.6s ease;
+  pointer-events: auto;
+  position: absolute;
+  top: 90%;
+  left: 2%;
+  transform: translate(0%, 0%);
+  width: 30%;
+  height: auto;
+  max-width: 3%;
+  z-index: 999;
+}
+
 .fade-in {
   opacity: 1;
 }
 
 .fade-target {
   opacity: 0;
-  transition: opacity 1.2s ease-out;
+  transform: translateY(10px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-target.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .fade-target.fade-in {
@@ -1242,62 +1314,20 @@ body.page-loaded .js-animate.is-visible.house {
   /* 確保可被偵測 */
 }
 
-.gacha {
-  text-align: center;
-  margin: 100px auto;
-}
-
-.machine {
-  position: relative;
-  margin: 0 auto 20px;
-}
-
-.machine-img {
-  width: 20%;
-}
-
-.candy {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  width: 25%;
-  transform: translate(-50%, -50%);
+/* --- 修正後的文字動畫：只管動畫，不管位置 --- */
+.block_1 p.fade-target {
   opacity: 0;
+  /* 初始狀態：維持水平置中 (-50%)，垂直方向往下掉 20px 做為動畫起點 */
+  /* 使用 calc(-50% + 20px) 可以確保它在任何 Top 設定下都維持置中感 */
+  transform: translate(-50%, calc(-50% + 20px));
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  transition-delay: 1.0s;
+  /* 糖果罐動畫後的延遲 */
 }
 
-/* 抽的時候 */
-.candy.is-rolling {
-  animation: dropSpin 1.2s ease-out forwards;
-}
-
-@keyframes dropSpin {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -150%) rotate(0deg);
-  }
-
-  30% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(-50%, 80%) rotate(720deg);
-  }
-}
-
-.gacha button {
-  padding: 20px 34px;
-  font-size: 18px;
-  border-radius: 999px;
-  border: none;
-  background: #e60000;
-  color: white;
-  cursor: pointer;
-}
-
-.result {
-  margin-top: 20px;
-  font-size: 20px;
-  color: #e60000;
+/* 當 JS 加入 is-visible 時，回歸到完美的置中位置 */
+.block_1 p.fade-target.is-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  /* 回到各裝置原本設定的中心點 */
 }

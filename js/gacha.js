@@ -3,7 +3,7 @@ const candy = document.getElementById("candy");
 const result = document.getElementById("result");
 
 const pool = [
-  { name: "可樂糖", img: "img/banner/banner_c1.svg", rate: 20 },
+  { name: "可樂糖", img: "img/banner/banner_c1.svg", rate: 17 },
   { name: "陀螺", img: "img/banner/banner_c2.svg", rate: 10 },
   { name: "劍玉", img: "img/banner/banner_c3.svg", rate: 10 },
   { name: "牙膏巧克力", img: "img/banner/banner_c4.svg", rate: 10 },
@@ -11,7 +11,8 @@ const pool = [
   { name: "溜溜球", img: "img/banner/banner_c6.svg", rate: 10 },
   { name: "足球巧克力", img: "img/banner/banner_c7.svg", rate: 10 },
   { name: "麵茶", img: "img/banner/banner_c8.svg", rate: 10 },
-  { name: "口紅糖", img: "img/banner/banner_c9.svg", rate: 10 }
+  { name: "口紅糖", img: "img/banner/banner_c9.svg", rate: 10 },
+  { name: "～～超稀有美少女戰士～～", img: "img/moon.png", rate: 3 }
 ];
 function drawCandy() {
   const total = pool.reduce((sum, item) => sum + item.rate, 0);
@@ -38,5 +39,6 @@ drawBtn.addEventListener("click", () => {
 
   setTimeout(() => {
     result.textContent = `你抽到了：${picked.name}`;
+    // result.textContent = `到訂購頁面購買商品吧！`;
   }, 1200);
 });
