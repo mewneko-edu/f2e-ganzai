@@ -1262,3 +1262,22 @@ body.page-loaded .js-animate.is-visible.house {
   transform: translate(-50%, -50%);
   /* 回到各裝置原本設定的中心點 */
 }
+
+@media (min-width: 1200px){
+ .easter-egg{
+   display:block;
+ }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+ .easter-egg{
+   display:none;
+ }
+}
+
+/* 手機 */
+@media (max-width: 767px) {
+ .easter-egg{
+   display:none;
+ }
+}
